@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Closest Facility Routing</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v6.13.0/css/ol.css" type="text/css">
+    <link rel="stylesheet" href="./nabbar.css">
+    <script src="https://openlayers.org/en/v6.13.0/build/ol.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/6.3.0/turf.min.js"></script>
+    <!-- <script src="https://unpkg.com/osrm@^5.25.0"></script> -->
+
+
+    <!-- Include Leaflet (required for Leaflet Routing Machine) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@^1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@^1.7.1/dist/leaflet.js"></script>
+
+    <!-- Include Leaflet Routing Machine with OSRM dependencies -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@^3.2.12/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet-routing-machine@^3.2.12/dist/leaflet-routing-machine.js"></script>
+
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">Open Source Routing</a>
+            <ul class="navbar-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="map" class="map"></div>
+    <button style="position: absolute; top: 6em;right: 0em;" onclick="findRoutes()">Get Optimized Routes</button>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
